@@ -1,5 +1,8 @@
 {
-  "name": "react-weather-icons",
+  "name": "@patrikhultgren/react-weather-icons",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/react-weather-icons"
+  },
   "version": "0.0.1",
   "description": "React weather icons component library",
   "scripts": {
