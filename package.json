@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/react-weather-icons"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React weather icons component library",
   "scripts": {
     "rollup": "rollup -c"
@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "rollup": "^3.20.4",
     "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
   },
