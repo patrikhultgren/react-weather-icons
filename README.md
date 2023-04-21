@@ -13,7 +13,7 @@ npm start
 To start Storybook:
 
 ```bash
-npm start
+npm run storybook
 ```
 
 To publish a new version of the library:
