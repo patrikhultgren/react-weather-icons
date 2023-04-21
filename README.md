@@ -16,11 +16,17 @@ To start Storybook:
 npm run storybook
 ```
 
-To publish a new version of the library:
+To create and publish a new version of the library:
 
 Increase the version in package.json.
 
-Then run:
+Build the library:
+
+```bash
+npm run rollup
+```
+
+Run to publish the library:
 
 ```bash
 npm publish
