@@ -2,6 +2,30 @@
 
 `react-weather-icons` is a library to provide weather icon components.
 
+## Scripts
+
+To start the development server run:
+
+```bash
+npm start
+```
+
+To start Storybook:
+
+```bash
+npm start
+```
+
+To publish a new version of the library:
+
+Increase the version in package.json.
+
+Then run:
+
+```bash
+npm publish
+```
+
 ## License
 
 Copyright (c) Patrik Hultgren.
