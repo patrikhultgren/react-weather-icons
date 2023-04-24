@@ -4,17 +4,19 @@ interface IProps {
   className?: string
   size?: string
   title?: string
+  x?: string | number
+  y?: string | number
 }
 
-const Fog = ({ className, size = '2.5rem', title }: IProps) => {
+const Fog = ({ className, size = '2.5rem', title, x = 0, y = 0 }: IProps) => {
   const fog = useId()
   const cloud = useId()
   const s15 = useId()
 
   return (
     <svg
-      x="0"
-      y="0"
+      x={x}
+      y={y}
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"

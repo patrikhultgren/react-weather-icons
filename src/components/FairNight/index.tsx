@@ -4,9 +4,17 @@ interface IProps {
   className?: string
   size?: string
   title?: string
+  x?: string | number
+  y?: string | number
 }
 
-const FairNight = ({ className, size = '2.5rem', title }: IProps) => {
+const FairNight = ({
+  className,
+  size = '2.5rem',
+  title,
+  x = 0,
+  y = 0,
+}: IProps) => {
   const cloud = useId()
   const moon = useId()
   const moonGrad = useId()
@@ -14,8 +22,8 @@ const FairNight = ({ className, size = '2.5rem', title }: IProps) => {
 
   return (
     <svg
-      x="0"
-      y="0"
+      x={x}
+      y={y}
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
