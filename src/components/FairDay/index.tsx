@@ -6,6 +6,7 @@ const FairDay = ({ title, size, ...rest }: IconProps) => {
   const cloudMask = useId()
   const sun = useId()
   const sunGlowGrad = useId()
+  const sunInnerGrad = useId()
   const s02d = useId()
 
   return (
@@ -33,7 +34,7 @@ const FairDay = ({ title, size, ...rest }: IconProps) => {
         ></path>
         <path
           className="sun-inner"
-          fill="url(#sun-inner-grad)"
+          fill={`url(#${sunInnerGrad})`}
           d="M22.74,51.5a21,21,0,1,0,7.69-28.69A21,21,0,0,0,22.74,51.5Z"
         ></path>
       </symbol>
@@ -64,7 +65,7 @@ const FairDay = ({ title, size, ...rest }: IconProps) => {
           <stop offset="67%" stopColor="#ffce47" />
           <stop offset="100%" stopColor="#ffdb73" />
         </radialGradient>
-        <linearGradient id="sun-inner-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id={sunInnerGrad} x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#ffaf22" />
           <stop offset="100%" stopColor="#f09900" />
         </linearGradient>
