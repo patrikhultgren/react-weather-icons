@@ -1,35 +1,13 @@
 import { useId } from 'react'
+import IconWrapper, { IconProps } from '../IconWrapper'
 
-interface IProps {
-  className?: string
-  size?: string
-  title?: string
-  x?: string | number
-  y?: string | number
-}
-
-const ClearSkyNight = ({
-  className,
-  size = '2.5rem',
-  title,
-  x = 0,
-  y = 0,
-}: IProps) => {
+const ClearSkyNight = ({ title, size, ...rest }: IconProps) => {
   const moon = useId()
   const moonGrad = useId()
   const s01d = useId()
 
   return (
-    <svg
-      x={x}
-      y={y}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={size}
-      height={size}
-      className={className}
-    >
+    <IconWrapper title={title} width={size} height={size} {...rest}>
       {title && <title>{title}</title>}
       <symbol id={moon}>
         <path
@@ -54,7 +32,7 @@ const ClearSkyNight = ({
         ></use>
       </symbol>
       <use xlinkHref={`#${s01d}`} x="0" y="0" width="100" height="100"></use>
-    </svg>
+    </IconWrapper>
   )
 }
 
