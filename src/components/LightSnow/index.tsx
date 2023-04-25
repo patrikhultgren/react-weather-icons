@@ -1,36 +1,13 @@
 import { useId } from 'react'
+import IconWrapper, { IconProps } from '../IconWrapper'
 
-interface IProps {
-  className?: string
-  size?: string
-  title?: string
-  x?: string | number
-  y?: string | number
-}
-
-const LightSnow = ({
-  className,
-  size = '2.5rem',
-  title,
-  x = 0,
-  y = 0,
-}: IProps) => {
+const LightSnow = ({ title, size, ...rest }: IconProps) => {
   const snowflake = useId()
   const cloud = useId()
   const s49 = useId()
 
   return (
-    <svg
-      x={x}
-      y={y}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={size}
-      height={size}
-      className={className}
-    >
-      {title && <title>{title}</title>}
+    <IconWrapper title={title} width={size} height={size} {...rest}>
       <symbol id={snowflake}>
         <path
           fill="#47c0e3"
@@ -75,7 +52,7 @@ const LightSnow = ({
         ></use>
       </symbol>
       <use xlinkHref={`#${s49}`} x="0" y="0" width="100" height="100"></use>
-    </svg>
+    </IconWrapper>
   )
 }
 
