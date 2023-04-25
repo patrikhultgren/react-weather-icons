@@ -1,20 +1,7 @@
 import { useId } from 'react'
+import IconWrapper, { IconProps } from '../IconWrapper'
 
-interface IProps {
-  className?: string
-  size?: string
-  title?: string
-  x?: string | number
-  y?: string | number
-}
-
-const FairDay = ({
-  className,
-  size = '2.5rem',
-  title,
-  x = 0,
-  y = 0,
-}: IProps) => {
+const FairDay = ({ title, size, ...rest }: IconProps) => {
   const cloud = useId()
   const cloudMask = useId()
   const sun = useId()
@@ -22,17 +9,7 @@ const FairDay = ({
   const s02d = useId()
 
   return (
-    <svg
-      x={x}
-      y={y}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={size}
-      height={size}
-      className={className}
-    >
-      {title && <title>{title}</title>}
+    <IconWrapper title={title} width={size} height={size} {...rest}>
       <symbol id={cloud}>
         <path d="M55.7,5A23.94,23.94,0,0,0,34.37,18.05a9.9,9.9,0,0,0-12.78,5.56,15,15,0,0,0-1.71-.1A14.81,14.81,0,0,0,9.2,28,14.63,14.63,0,0,0,5,38.17v.21A14.83,14.83,0,0,0,19.88,53.06H75.59a14.3,14.3,0,0,0,3.67-28.14A23.93,23.93,0,0,0,55.7,5Z"></path>
         <image
@@ -114,7 +91,7 @@ const FairDay = ({
         ></use>
       </symbol>
       <use xlinkHref={`#${s02d}`} x="0" y="0" width="100" height="100"></use>
-    </svg>
+    </IconWrapper>
   )
 }
 
