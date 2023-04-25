@@ -1,37 +1,19 @@
 import { useId } from 'react'
+import IconWrapper from '../IconWrapper'
 
-interface IProps {
-  className?: string
-  size?: string
-  title?: string
-  x?: string | number
-  y?: string | number
+type IProps = React.SVGProps<SVGSVGElement> & {
+  title: string
+  size?: number | string
 }
 
-const ClearSkyDay = ({
-  className,
-  size = '2.5rem',
-  title,
-  x = 0,
-  y = 0,
-}: IProps) => {
+const ClearSkyDay = ({ title, size, ...rest }: IProps) => {
   const sun = useId()
   const sunGlowGrad = useId()
   const sunInnerGrad = useId()
   const s01d = useId()
 
   return (
-    <svg
-      x={x}
-      y={y}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={size}
-      height={size}
-      className={className}
-    >
-      {title && <title>{title}</title>}
+    <IconWrapper title={title} width={size} height={size} {...rest}>
       <symbol id={sun}>
         <path
           className="sun-glow"
@@ -77,7 +59,7 @@ const ClearSkyDay = ({
         ></use>
       </symbol>
       <use xlinkHref={`#${s01d}`} x="0" y="0" width="100" height="100"></use>
-    </svg>
+    </IconWrapper>
   )
 }
 
