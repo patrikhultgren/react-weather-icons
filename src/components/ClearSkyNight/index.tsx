@@ -4,7 +4,7 @@ import IconWrapper, { IconProps } from '../IconWrapper'
 const ClearSkyNight = ({ title, size, ...rest }: IconProps) => {
   const moon = useId()
   const moonGrad = useId()
-  const s01d = useId()
+  const s01n = useId()
 
   return (
     <IconWrapper title={title} size={size} {...rest}>
@@ -16,11 +16,11 @@ const ClearSkyNight = ({ title, size, ...rest }: IconProps) => {
       </symbol>
       <defs>
         <linearGradient id={moonGrad} x1="0%" y1="50%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#686e73" />
-          <stop offset="100%" stopColor="#6a7075" />
+          <stop offset="0%" stop-color="#686e73" />
+          <stop offset="100%" stop-color="#6a7075" />
         </linearGradient>
       </defs>
-      <symbol id={s01d}>
+      <symbol id={s01n}>
         <use
           xlinkHref={`#${moon}`}
           x="0"
@@ -30,7 +30,7 @@ const ClearSkyNight = ({ title, size, ...rest }: IconProps) => {
           transform="translate(20,20) scale(1,1)"
         ></use>
       </symbol>
-      <use xlinkHref={`#${s01d}`} x="0" y="0" width="100" height="100"></use>
+      <use xlinkHref={`#${s01n}`} x="0" y="0" width="100" height="100"></use>
     </IconWrapper>
   )
 }

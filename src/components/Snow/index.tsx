@@ -2,8 +2,8 @@ import { useId } from 'react'
 import IconWrapper, { IconProps } from '../IconWrapper'
 
 const Snow = ({ title, size, ...rest }: IconProps) => {
-  const snowflake = useId()
   const cloud = useId()
+  const snowflake = useId()
   const s13 = useId()
 
   return (

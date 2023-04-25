@@ -6,6 +6,7 @@ const FairNight = ({ title, size, ...rest }: IconProps) => {
   const moon = useId()
   const moonGrad = useId()
   const s02n = useId()
+  const cloudMask1 = useId()
 
   return (
     <IconWrapper title={title} size={size} {...rest}>
@@ -26,14 +27,14 @@ const FairNight = ({ title, size, ...rest }: IconProps) => {
         ></path>
       </symbol>
       <defs>
-        <mask id="cloud_43_37_063_063_5">
+        <mask id={cloudMask1}>
           <rect x="0" y="0" width="100" height="100" fill="white"></rect>
           <use
             xlinkHref={`#${cloud}`}
             fill="black"
             stroke="black"
-            strokeLinejoin="round"
-            strokeWidth="10"
+            stroke-linejoin="round"
+            stroke-width="10"
             x="0"
             y="0"
             width="100"
@@ -42,12 +43,12 @@ const FairNight = ({ title, size, ...rest }: IconProps) => {
           ></use>
         </mask>
         <linearGradient id={moonGrad} x1="0%" y1="50%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#686e73" />
-          <stop offset="100%" stopColor="#6a7075" />
+          <stop offset="0%" stop-color="#686e73" />
+          <stop offset="100%" stop-color="#6a7075" />
         </linearGradient>
       </defs>
       <symbol id={s02n}>
-        <g mask="url(#cloud_43_37_063_063_5)">
+        <g mask={`url(#${cloudMask1})`}>
           <use
             xlinkHref={`#${moon}`}
             x="0"

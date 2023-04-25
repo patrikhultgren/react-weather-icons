@@ -2,9 +2,8 @@ import { useId } from 'react'
 import IconWrapper, { IconProps } from '../IconWrapper'
 
 const Fog = ({ title, size, ...rest }: IconProps) => {
-  const fog = useId()
   const cloud = useId()
-  const s15 = useId()
+  const fog = useId()
 
   return (
     <IconWrapper title={title} size={size} {...rest}>
@@ -25,7 +24,7 @@ const Fog = ({ title, size, ...rest }: IconProps) => {
           xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAkCAMAAAAkYj0PAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAVUExURSgoKExpcaCgoFBQUG5ublBQUISEhI1fsT0AAAAHdFJOUxsACBsPFRpGXuFgAAABWElEQVRIx7XV25bDIAgF0BMu/v8nF/E+iWlqHNKVN3cpIMXxL4GFM3SQfTazkUyxk63oLYwlVSy2silXkS/wUrZS2a3ZCn1zsdSw7UUYijuHsTa1IvfwWrbSXLkc4N9r27JViwmM1UtWXA3hohQ41m6vl8FQZi7wu2z7KXPW4uRiZS+2AmdXN7DdQEQWQHYHlt6z0dXBBa2xeeVktiZc1jDoF5eGkI4d4MjKc7cNbZ3bqjocLLx5oPDYTaIftcfvAvcs2GFxVsJTOP1wO1jGdUSLaz/DWA1Tl45+Tkqul2ArcPzayGq8JafOUffP3TUp6JQs+Rptc6vtmtBkUw+dv0NzWG0PYf8O7Ym09+ITXyXOPZqEX95aFe3PKxRsL2XV3HR+ZALirPSF0ceHp6F51WBv1A22VaW2GHWzWvat8LOAPf4CrjrA+neNK7+PQBf/DmmLrId09/QDWyESBsibwBUAAAAASUVORK5CYII="
         ></image>
       </symbol>
-      <symbol id={s15}>
+      <symbol id="s15">
         <use
           xlinkHref={`#${cloud}`}
           fill="#dddddd"
@@ -44,7 +43,7 @@ const Fog = ({ title, size, ...rest }: IconProps) => {
           transform="translate(0,76) scale(1,1)"
         ></use>
       </symbol>
-      <use xlinkHref={`#${s15}`} x="0" y="0" width="100" height="100"></use>
+      <use xlinkHref="#s15" x="0" y="0" width="100" height="100"></use>
     </IconWrapper>
   )
 }

@@ -2,15 +2,14 @@ import { useId } from 'react'
 import IconWrapper, { IconProps } from '../IconWrapper'
 
 const HeavyRainShowersDay = ({ title, size, ...rest }: IconProps) => {
-  const raindrop = useId()
-  const cloud = useId()
-  const cloudMask = useId()
-  const s10 = useId()
   const sun = useId()
+  const cloud = useId()
+  const raindrop = useId()
   const sunGlowGrad = useId()
   const sunInnerGrad = useId()
-  const s50 = useId()
+  const s10 = useId()
   const s41d = useId()
+  const cloudMask2 = useId()
 
   return (
     <IconWrapper title={title} size={size} {...rest}>
@@ -99,7 +98,7 @@ const HeavyRainShowersDay = ({ title, size, ...rest }: IconProps) => {
         ></path>
       </symbol>
       <defs>
-        <mask id={cloudMask}>
+        <mask id={cloudMask2}>
           <rect x="0" y="0" width="100" height="100" fill="white"></rect>
           <use
             xlinkHref={`#${cloud}`}
@@ -131,7 +130,7 @@ const HeavyRainShowersDay = ({ title, size, ...rest }: IconProps) => {
         </linearGradient>
       </defs>
       <symbol id={s41d}>
-        <g mask={`url(#${cloudMask})`}>
+        <g mask={`url(#${cloudMask2})`}>
           <use
             xlinkHref={`#${sun}`}
             x="0"

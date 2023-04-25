@@ -3,11 +3,11 @@ import IconWrapper, { IconProps } from '../IconWrapper'
 
 const PartlyCloudyNight = ({ title, size, ...rest }: IconProps) => {
   const cloud = useId()
-  const cloudMask = useId()
   const moon = useId()
   const moonGrad = useId()
-  const s04 = useId()
   const s03n = useId()
+  const s04 = useId()
+  const cloudMask2 = useId()
 
   return (
     <IconWrapper title={title} size={size} {...rest}>
@@ -39,14 +39,14 @@ const PartlyCloudyNight = ({ title, size, ...rest }: IconProps) => {
         ></path>
       </symbol>
       <defs>
-        <mask id={cloudMask}>
+        <mask id={cloudMask2}>
           <rect x="0" y="0" width="100" height="100" fill="white"></rect>
           <use
             xlinkHref={`#${cloud}`}
             fill="black"
             stroke="black"
-            strokeLinejoin="round"
-            strokeWidth="10"
+            stroke-linejoin="round"
+            stroke-width="10"
             x="0"
             y="0"
             width="100"
@@ -55,12 +55,12 @@ const PartlyCloudyNight = ({ title, size, ...rest }: IconProps) => {
           ></use>
         </mask>
         <linearGradient id={moonGrad} x1="0%" y1="50%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#686e73" />
-          <stop offset="100%" stopColor="#6a7075" />
+          <stop offset="0%" stop-color="#686e73" />
+          <stop offset="100%" stop-color="#6a7075" />
         </linearGradient>
       </defs>
       <symbol id={s03n}>
-        <g mask={`url(#${cloudMask})`}>
+        <g mask={`url(#${cloudMask2})`}>
           <use
             xlinkHref={`#${moon}`}
             x="0"

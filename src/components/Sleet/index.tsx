@@ -2,9 +2,9 @@ import { useId } from 'react'
 import IconWrapper, { IconProps } from '../IconWrapper'
 
 const Sleet = ({ title, size, ...rest }: IconProps) => {
-  const raindrop = useId()
-  const snowflake = useId()
   const cloud = useId()
+  const snowflake = useId()
+  const raindrop = useId()
   const s12 = useId()
 
   return (

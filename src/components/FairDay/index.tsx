@@ -2,12 +2,12 @@ import { useId } from 'react'
 import IconWrapper, { IconProps } from '../IconWrapper'
 
 const FairDay = ({ title, size, ...rest }: IconProps) => {
-  const cloud = useId()
-  const cloudMask = useId()
   const sun = useId()
+  const cloud = useId()
   const sunGlowGrad = useId()
   const sunInnerGrad = useId()
   const s02d = useId()
+  const cloudMask1 = useId()
 
   return (
     <IconWrapper title={title} size={size} {...rest}>
@@ -39,14 +39,14 @@ const FairDay = ({ title, size, ...rest }: IconProps) => {
         ></path>
       </symbol>
       <defs>
-        <mask id={cloudMask}>
+        <mask id={cloudMask1}>
           <rect x="0" y="0" width="100" height="100" fill="white"></rect>
           <use
             xlinkHref={`#${cloud}`}
             fill="black"
             stroke="black"
-            strokeLinejoin="round"
-            strokeWidth="10"
+            stroke-linejoin="round"
+            stroke-width="10"
             x="0"
             y="0"
             width="100"
@@ -61,17 +61,17 @@ const FairDay = ({ title, size, ...rest }: IconProps) => {
           r="41"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="54%" stopColor="#d6b849" />
-          <stop offset="67%" stopColor="#ffce47" />
-          <stop offset="100%" stopColor="#ffdb73" />
+          <stop offset="54%" stop-color="#d6b849" />
+          <stop offset="67%" stop-color="#ffce47" />
+          <stop offset="100%" stop-color="#ffdb73" />
         </radialGradient>
         <linearGradient id={sunInnerGrad} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#ffaf22" />
-          <stop offset="100%" stopColor="#f09900" />
+          <stop offset="0%" stop-color="#ffaf22" />
+          <stop offset="100%" stop-color="#f09900" />
         </linearGradient>
       </defs>
       <symbol id={s02d}>
-        <g mask={`url(#${cloudMask})`}>
+        <g mask={`url(#${cloudMask1})`}>
           <use
             xlinkHref={`#${sun}`}
             x="0"

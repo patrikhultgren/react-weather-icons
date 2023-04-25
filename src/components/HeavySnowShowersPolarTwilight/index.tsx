@@ -2,16 +2,16 @@ import { useId } from 'react'
 import IconWrapper, { IconProps } from '../IconWrapper'
 
 const HeavySnowShowersPolarTwilight = ({ title, size, ...rest }: IconProps) => {
-  const snowflake = useId()
-  const cloud = useId()
-  const cloudMask = useId()
   const sun = useId()
-  const s50 = useId()
-  const sunWinter = useId()
-  const sunWinterMask = useId()
+  const cloud = useId()
+  const snowflake = useId()
   const sunGlowGrad = useId()
   const sunInnerGrad = useId()
+  const s50 = useId()
   const s45m = useId()
+  const sunWinter = useId()
+  const sunWinterMask = useId()
+  const cloudMask2 = useId()
 
   return (
     <IconWrapper title={title} size={size} {...rest}>
@@ -117,7 +117,7 @@ const HeavySnowShowersPolarTwilight = ({ title, size, ...rest }: IconProps) => {
         ></path>
       </symbol>
       <defs>
-        <mask id={cloudMask}>
+        <mask id={cloudMask2}>
           <rect x="0" y="0" width="100" height="100" fill="white"></rect>
           <use
             xlinkHref={`#${cloud}`}
@@ -152,7 +152,7 @@ const HeavySnowShowersPolarTwilight = ({ title, size, ...rest }: IconProps) => {
         </linearGradient>
       </defs>
       <symbol id={s45m}>
-        <g mask="url(#cloud_3_18_1_1_5)">
+        <g mask={`url(#${cloudMask2})`}>
           <use
             xlinkHref={`#${sunWinter}`}
             x="0"
