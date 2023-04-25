@@ -1,12 +1,12 @@
 import { ReactNode } from 'react'
 
 export type IconProps = React.SVGProps<SVGSVGElement> & {
-  title: string
+  title?: string
   size?: number | string
 }
 
 type IconWrapperProps = React.SVGProps<SVGSVGElement> & {
-  title: string
+  title?: string
   size?: string | number
   x?: string | number
   y?: string | number
