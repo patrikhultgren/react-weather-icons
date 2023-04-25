@@ -14,7 +14,6 @@ type IconWrapperProps = React.SVGProps<SVGSVGElement> & {
 }
 
 const IconWrapper = ({
-  className,
   x = 0,
   y = 0,
   size = '2.5rem',
@@ -31,7 +30,6 @@ const IconWrapper = ({
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width={size}
       height={size}
-      className={className}
       {...rest}
     >
       {title && <title>{title}</title>}
