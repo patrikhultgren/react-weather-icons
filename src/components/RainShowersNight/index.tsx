@@ -66,7 +66,7 @@ const RainShowersNight = ({ title, size, ...rest }: IconProps) => {
       <symbol id={moon}>
         <path
           d="M28.43,0A28.44,28.44,0,0,1,32.3,14.32,28.61,28.61,0,0,1,3.69,42.93,28.71,28.71,0,0,1,0,42.66,28.59,28.59,0,1,0,28.43,0Z"
-          fill={`url(${moonGrad})`}
+          fill={`url(#${moonGrad})`}
         ></path>
       </symbol>
       <defs>
@@ -91,7 +91,7 @@ const RainShowersNight = ({ title, size, ...rest }: IconProps) => {
         </linearGradient>
       </defs>
       <symbol id={s05n}>
-        <g mask={`url(${cloudMask})`}>
+        <g mask={`url(#${cloudMask})`}>
           <use
             xlinkHref={`#${moon}`}
             x="0"
