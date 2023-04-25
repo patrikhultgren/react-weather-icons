@@ -1,6 +1,11 @@
 import { ReactNode } from 'react'
 
-type IProps = React.SVGProps<SVGSVGElement> & {
+export type IconProps = React.SVGProps<SVGSVGElement> & {
+  title: string
+  size?: number | string
+}
+
+type IconWrapperProps = React.SVGProps<SVGSVGElement> & {
   title: string
   size?: string | number
   x?: string | number
@@ -16,7 +21,7 @@ const IconWrapper = ({
   title,
   children,
   ...rest
-}: IProps) => {
+}: IconWrapperProps) => {
   return (
     <svg
       x={x}

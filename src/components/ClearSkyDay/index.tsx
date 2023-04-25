@@ -1,12 +1,7 @@
 import { useId } from 'react'
-import IconWrapper from '../IconWrapper'
+import IconWrapper, { IconProps } from '../IconWrapper'
 
-type IProps = React.SVGProps<SVGSVGElement> & {
-  title: string
-  size?: number | string
-}
-
-const ClearSkyDay = ({ title, size, ...rest }: IProps) => {
+const ClearSkyDay = ({ title, size, ...rest }: IconProps) => {
   const sun = useId()
   const sunGlowGrad = useId()
   const sunInnerGrad = useId()
