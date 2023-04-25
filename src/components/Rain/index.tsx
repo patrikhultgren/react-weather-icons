@@ -1,37 +1,13 @@
 import { useId } from 'react'
+import IconWrapper, { IconProps } from '../IconWrapper'
 
-type IProps = React.SVGProps<SVGSVGElement> & {
-  title: string
-  size?: string | number
-  x?: string | number
-  y?: string | number
-}
-
-const Rain = ({
-  className,
-  x = 0,
-  y = 0,
-  size = '2.5rem',
-  title,
-  ...rest
-}: IProps) => {
+const Rain = ({ title, size, ...rest }: IconProps) => {
   const raindrop = useId()
   const cloud = useId()
   const s09 = useId()
 
   return (
-    <svg
-      x={x}
-      y={y}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={size}
-      height={size}
-      className={className}
-      {...rest}
-    >
-      {title && <title>{title}</title>}
+    <IconWrapper title={title} width={size} height={size} {...rest}>
       <symbol id={raindrop}>
         <path
           fill="#0062bf"
@@ -84,7 +60,7 @@ const Rain = ({
         ></use>
       </symbol>
       <use xlinkHref={`#${s09}`} x="0" y="0" width="100" height="100"></use>
-    </svg>
+    </IconWrapper>
   )
 }
 
