@@ -1,30 +1,13 @@
 import { useId } from 'react'
+import IconWrapper, { IconProps } from '../IconWrapper'
 
-interface IProps {
-  className?: string
-  size?: string
-  title?: string
-  x?: string | number
-  y?: string | number
-}
-
-const Fog = ({ className, size = '2.5rem', title, x = 0, y = 0 }: IProps) => {
+const Fog = ({ title, size, ...rest }: IconProps) => {
   const fog = useId()
   const cloud = useId()
   const s15 = useId()
 
   return (
-    <svg
-      x={x}
-      y={y}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={size}
-      height={size}
-      className={className}
-    >
-      {title && <title>{title}</title>}
+    <IconWrapper title={title} width={size} height={size} {...rest}>
       <symbol id={fog}>
         <g fill="#999999">
           <path d="M88.7,3H14.3C13.6,3,13,2.3,13,1.5S13.6,0,14.3,0h74.4C89.4,0,90,0.7,90,1.5S89.4,3,88.7,3z"></path>
@@ -62,7 +45,7 @@ const Fog = ({ className, size = '2.5rem', title, x = 0, y = 0 }: IProps) => {
         ></use>
       </symbol>
       <use xlinkHref={`#${s15}`} x="0" y="0" width="100" height="100"></use>
-    </svg>
+    </IconWrapper>
   )
 }
 
