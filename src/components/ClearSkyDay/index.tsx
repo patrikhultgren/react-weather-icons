@@ -8,7 +8,7 @@ const ClearSkyDay = ({ title, size, ...rest }: IconProps) => {
   const s01d = useId()
 
   return (
-    <IconWrapper title={title} width={size} height={size} {...rest}>
+    <IconWrapper title={title} size={size} {...rest}>
       <symbol id={sun}>
         <path
           className="sun-glow"

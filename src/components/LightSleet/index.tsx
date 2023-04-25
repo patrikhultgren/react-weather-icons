@@ -8,7 +8,7 @@ const LightSleet = ({ title, size, ...rest }: IconProps) => {
   const s47 = useId()
 
   return (
-    <IconWrapper title={title} width={size} height={size} {...rest}>
+    <IconWrapper title={title} size={size} {...rest}>
       <symbol id={raindrop}>
         <path
           fill="#0062bf"

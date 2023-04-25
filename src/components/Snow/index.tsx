@@ -7,7 +7,7 @@ const Snow = ({ title, size, ...rest }: IconProps) => {
   const s13 = useId()
 
   return (
-    <IconWrapper title={title} width={size} height={size} {...rest}>
+    <IconWrapper title={title} size={size} {...rest}>
       <symbol id={snowflake}>
         <path
           fill="#47c0e3"
