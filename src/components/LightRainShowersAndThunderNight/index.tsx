@@ -100,8 +100,8 @@ const LightRainShowersAndThunderNight = ({
           ></use>
         </mask>
         <linearGradient id={moonGrad} x1="0%" y1="50%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#686e73" />
-          <stop offset="100%" stop-color="#6a7075" />
+          <stop offset="0%" stopColor="#686e73" />
+          <stop offset="100%" stopColor="#6a7075" />
         </linearGradient>
         <mask id={lightningMask}>
           <rect x="0" y="0" width="100" height="100" fill="white"></rect>

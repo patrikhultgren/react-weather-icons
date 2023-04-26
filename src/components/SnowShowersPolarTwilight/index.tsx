@@ -126,13 +126,13 @@ const SnowShowersPolarTwilight = ({ title, size, ...rest }: IconProps) => {
           r="41"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="54%" stop-color="#d6b849" />
-          <stop offset="67%" stop-color="#ffce47" />
-          <stop offset="100%" stop-color="#ffdb73" />
+          <stop offset="54%" stopColor="#d6b849" />
+          <stop offset="67%" stopColor="#ffce47" />
+          <stop offset="100%" stopColor="#ffdb73" />
         </radialGradient>
         <linearGradient id={sunInnerGrad} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#ffaf22" />
-          <stop offset="100%" stop-color="#f09900" />
+          <stop offset="0%" stopColor="#ffaf22" />
+          <stop offset="100%" stopColor="#f09900" />
         </linearGradient>
       </defs>
       <symbol id={s08m}>
