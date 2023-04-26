@@ -101,8 +101,8 @@ const SleetShowersAndThunderNight = ({ title, size, ...rest }: IconProps) => {
             xlinkHref={`#${cloud}`}
             fill="black"
             stroke="black"
-            stroke-linejoin="round"
-            stroke-width="10"
+            strokeLinejoin="round"
+            strokeWidth="10"
             x="0"
             y="0"
             width="100"
@@ -120,8 +120,8 @@ const SleetShowersAndThunderNight = ({ title, size, ...rest }: IconProps) => {
             xlinkHref={`#${lightning}`}
             fill="black"
             stroke="black"
-            stroke-linejoin="round"
-            stroke-width="8"
+            strokeLinejoin="round"
+            strokeWidth="8"
             x="0"
             y="0"
             width="100"

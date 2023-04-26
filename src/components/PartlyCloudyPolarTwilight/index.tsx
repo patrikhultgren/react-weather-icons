@@ -76,8 +76,8 @@ const PartlyCloudyPolarTwilight = ({ title, size, ...rest }: IconProps) => {
             xlinkHref={`#${cloud}`}
             fill="black"
             stroke="black"
-            stroke-linejoin="round"
-            stroke-width="10"
+            strokeLinejoin="round"
+            strokeWidth="10"
             x="0"
             y="0"
             width="100"
