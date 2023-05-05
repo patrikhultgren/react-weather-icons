@@ -24,7 +24,7 @@ function ExampleComponent() {
 
 ## Props
 
-The icons allows all svg attributes. Here are the most important props:
+The icons allows all svg attributes. Here are the most common props:
 
 | Key         | Default     | Notes                               |
 | ----------- | ----------- | ----------------------------------- |
