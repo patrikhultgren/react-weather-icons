@@ -7,7 +7,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-webpack5-compiler-babel',
-    '@chromatic-com/storybook'
+    '@chromatic-com/storybook',
   ],
 
   framework: {
@@ -18,7 +18,15 @@ const config: StorybookConfig = {
   docs: {},
 
   typescript: {
-    reactDocgen: 'react-docgen-typescript'
-  }
+    reactDocgen: 'react-docgen-typescript',
+  },
+
+  babel: async (options) => ({
+    ...options,
+    presets: [
+      ...(options.presets || []),
+      ['@babel/preset-react', { runtime: 'automatic' }],
+    ],
+  }),
 }
 export default config
